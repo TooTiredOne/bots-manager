@@ -9,6 +9,8 @@ from app.database.crud_users import get_user_by_username
 from app.database.db import Session
 from app.utils import make_password_hash
 
+# the code was adopted from fastapi documentation
+
 # pylint: disable=broad-except
 
 

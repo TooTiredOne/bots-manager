@@ -5,6 +5,7 @@ class UserBase(BaseModel):
     username: str
 
 
+# schema for user registration
 class UserCreate(UserBase):
     password: str
 
@@ -20,6 +21,7 @@ class BotBase(BaseModel):
     pass
 
 
+# schema for bot registration
 class BotCreate(BotBase):
     token: str
 
