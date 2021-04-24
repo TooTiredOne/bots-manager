@@ -15,7 +15,7 @@ from app.dependencies import get_current_user, get_session
 
 HOSTNAME = 'another-bots-manager.herokuapp.com'
 WEBHOOK_DIR = 'echo'
-HOST_WEBHOOK = f"https://{HOSTNAME}/" + 'api/v1/bots/' + WEBHOOK_DIR
+HOST_WEBHOOK = f'https://{HOSTNAME}/' + 'api/v1/bots/' + WEBHOOK_DIR
 router = APIRouter()
 
 logging.basicConfig(level=logging.INFO)
@@ -111,7 +111,11 @@ def remove_bot(
     return bot_id
 
 
-@router.post('/' + WEBHOOK_DIR + '/{bot_token}', status_code=status.HTTP_200_OK)
+@router.post(
+    '/' + WEBHOOK_DIR + '/{bot_token}',
+    status_code=status.HTTP_200_OK,
+    summary='To accept messages from tg servers',
+)
 async def echo(
     request: Request, bot_token: str, session: Session = Depends(get_session)
 ) -> int:
