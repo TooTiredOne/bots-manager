@@ -13,7 +13,7 @@ from app.dependencies import get_current_user, get_session
 # code for echo was based on the following article
 # https://habr.com/ru/post/322078/#content
 
-HOSTNAME = 'botsmanager.herokuapp.com'
+HOSTNAME = 'another-bots-manager.herokuapp.com'
 WEBHOOK_DIR = 'echo'
 HOST_WEBHOOK = f"https://{HOSTNAME}/" + 'api/v1/bots/' + WEBHOOK_DIR
 router = APIRouter()
