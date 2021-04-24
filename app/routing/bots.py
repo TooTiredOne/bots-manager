@@ -13,9 +13,9 @@ from app.dependencies import get_current_user, get_session
 # code for echo was based on the following article
 # https://habr.com/ru/post/322078/#content
 
-HOSTNAME = 'https://botsmanager.herokuapp.com/'
+HOSTNAME = 'botsmanager.herokuapp.com'
 WEBHOOK_DIR = 'echo'
-HOST_WEBHOOK = HOSTNAME + 'api/v1/bots/' + WEBHOOK_DIR
+HOST_WEBHOOK = f"https://{HOSTNAME}/" + 'api/v1/bots/' + WEBHOOK_DIR
 router = APIRouter()
 
 logging.basicConfig(level=logging.INFO)
