@@ -1,6 +1,6 @@
 # bots-manager
 
-A simple service for adding/removing/listing bots with basic auth
+A simple service for adding/removing/listing bots on fastapi with basic auth
 
 Deployed version is available here: https://another-bots-manager.herokuapp.com <br>
 API Swagger documentation is available here: https://another-bots-manager.herokuapp.com/docs
